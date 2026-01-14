@@ -1,0 +1,160 @@
+:root {
+    /* 2026 Premium Palette */
+    --bg-black: #050505; 
+    --glass-purple: rgba(123, 31, 162, 0.15);
+    --neon-cyan: #00f2ff;
+    --neon-purple: #bc13fe;
+    --text-main: #e2e8f0;
+    --border-glow: rgba(0, 242, 255, 0.2);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-black);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    /* Animated background glow */
+    background: radial-gradient(circle at 50% -20%, #2b0b3f 0%, #050505 80%);
+}
+
+.app-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    position: relative;
+}
+
+/* FANCY FULL-SCREEN HEADER */
+header {
+    padding: 25px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border-glow);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    background: linear-gradient(to right, var(--neon-cyan), var(--neon-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 10px rgba(0, 242, 255, 0.5));
+}
+
+/* CHAT CANVAS WITH FLOATING EFFECT */
+#chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* GLASSMORPHIC CARDS */
+.message {
+    max-width: 75%;
+    padding: 20px 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    animation: slideIn 0.4s ease-out;
+}
+
+.ai {
+    align-self: flex-start;
+    background: var(--glass-purple);
+    border-left: 3px solid var(--neon-purple);
+}
+
+.user {
+    align-self: flex-end;
+    background: rgba(255, 255, 255, 0.03);
+    border-right: 3px solid var(--neon-cyan);
+}
+
+/* FANCY PDF & LINK BUTTONS */
+.ai a {
+    display: inline-flex;
+    margin-top: 15px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+    color: #000 !important;
+    font-weight: 800;
+    text-decoration: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    transition: 0.4s;
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
+}
+
+.ai a:hover {
+    transform: scale(1.05) translateY(-3px);
+    box-shadow: 0 0 25px rgba(188, 19, 254, 0.6);
+}
+
+/* CYBER INPUT BAR */
+.input-area {
+    padding: 40px;
+    background: linear-gradient(to top, #000 40%, transparent);
+}
+
+.input-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-glow);
+    border-radius: 50px;
+    padding: 8px 25px;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 10px rgba(0, 242, 255, 0.1);
+}
+
+textarea {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    font-size: 1.1rem;
+    padding: 15px 0;
+}
+
+.send-btn {
+    background: var(--neon-cyan);
+    color: #000;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    background: var(--neon-purple);
+    color: #fff;
+    box-shadow: 0 0 20px var(--neon-purple);
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
