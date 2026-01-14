@@ -118,6 +118,7 @@ This project is licensed for educational and development purposes.
 * Flask Framework
 
 ---
+JUST THE LOCAL HOST IMPLEMENTATION::
 
 
 <img width="1920" height="995" alt="Screenshot (378)" src="https://github.com/user-attachments/assets/2da3720d-474b-4207-9815-ceb2c40eea8c" />
