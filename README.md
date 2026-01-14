@@ -1,4 +1,5 @@
  🤖 Custom LLM Chatbot – Flask + Groq + Tavily
+ As a part of my  Gen AI learning journey I developed above repository 
 
 A lightweight, production-ready chatbot built with **Flask**, powered by **Groq LLM API** for fast responses and **Tavily Search API** for real-time web-augmented answers.
 
